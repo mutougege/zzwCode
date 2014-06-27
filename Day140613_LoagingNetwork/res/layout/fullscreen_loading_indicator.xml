@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 20111031 ltc 删除被注释掉的代码 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fullscreen_loading_indicator"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ty_bg"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <!-- 小提示 -->
+
+    <LinearLayout
+        android:id="@+id/fullscreen_loading_indicator_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/loading_msg_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/fullscreen_loading_indicator_msg_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:gravity="center"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ff000000" />
+    </LinearLayout>
+
+    <!-- 句话转及“加载中...” -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ProgressBar
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_horizontal"
+            android:indeterminateDrawable="@anim/progressbar_loading" >
+        </ProgressBar>
+
+        <TextView
+            android:id="@+id/current_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:text="@string/loading"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ff000000" >
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>

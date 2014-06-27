@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="entries_muti_select_list_preference">
+        <item>item a</item>
+        <item>item b</item>
+        <item>item c</item>
+        <item>item d</item>
+        <item>item e</item>
+        <item>item f</item>
+    </string-array>
+    
+    <string-array name="entries_values_muti_select_list_preference">
+        <item>a</item>
+        <item>b</item>
+        <item>c</item>
+        <item>d</item>
+        <item>e</item>
+        <item>f</item>
+    </string-array>
+    
+</resources>

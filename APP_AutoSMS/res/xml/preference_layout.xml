@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="auto_settings"
+        android:summary="自动回复设置"
+        android:title="自动回复设置" >
+        
+        <ListPreference
+		android:key="festival_Preference"
+		android:title="选择节日"
+		android:summary="默认为元旦"
+		android:defaultValue="1"
+		android:entries="@array/entries_festival_list_preference"
+		android:entryValues="@array/entries_values_festival_list_preference"
+		android:dialogTitle="请选择节日"
+		></ListPreference>
+
+        <com.popcorn.autosms.utils.MutiSelectListPreference
+            android:dialogTitle="请选择需要自动回复的联系人"
+            android:key="select_contacts_list_preference"
+            android:entries="@array/entries_message_state_list_preference"
+			android:entryValues="@array/entries_values_message_state_list_preference"
+            android:summary="默认为空"
+            android:title="选择自动回复联系人" >
+        </com.popcorn.autosms.utils.MutiSelectListPreference>
+        
+        <EditTextPreference android:key="check_threshold"
+            android:title="检测阈值"
+            android:summary="填写一个不大于10的数字,否则默认为3"
+            android:dialogTitle="阈值设置" />
+        
+        <CheckBoxPreference android:key="auto_reply"
+            android:title="开启自动回复"
+            android:summary="开启自动回复"/>
+        
+    </PreferenceCategory>
+
+</PreferenceScreen>

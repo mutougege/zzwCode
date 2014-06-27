@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">短信自动回复</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="hello">Hello World, MutiSelectListPreference!</string>   
+    <string name="title_muti_select_list_preference">选择自动回复联系人</string>    
+    <string name="dialog_title_muti_select_list_preference">请选择需要自动回复的联系人</string>    
+    <string name="summary_muti_select_list_preference">默认为全选</string>
+    <string name="contact_me">我们的QQ:918515831 :)</string>
+    <string name="plz_contact_me">联系我:)</string>
+    <string name="auto_send">自动回复</string>
+    <string name="auto_settings">自动回复设 置</string>
+    <string name="reply_txt_settings">回复内容设置</string>
+    <string name="soft_settings">软件设置</string>
+    <string name="clear">清 空</string>
+    <string name="save">保 存</string>
+    <string name="input_hint">请输入自动回复的内容</string>
+    <string name="confirm">确 定</string>
+    <string name="cancel">取 消</string>
+    <string name="confirm_clear">确定清空内容?</string>
+    <string name="no_sd_card">手机没有挂载SD卡</string>
+    <string name="refresh"> 刷 新 </string>
+    <string name="sms_refreshing">短信列表刷新中。。。</string>
+    <string name="clear_sms_rec">清空发送记录</string>
+    <string name="title_activity_list_record">短息已自动回复列表</string>
+    <string name="title_activity_get_record">GetRecordActivity</string>
+
+</resources>

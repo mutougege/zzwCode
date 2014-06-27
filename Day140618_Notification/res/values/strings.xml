@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Day140618_Notification</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="downloadProgress">下载进度</string>
+    <string name="notif_down_file">文件开始下载</string>
+    <string name="downloadSuccess">下载成功！</string>
+    <string name="downloadFailure">下载失败！</string>
+    <string name="downloadurl">http://apk.ektouch.cn/media/201404/4b9893ae-8a29-4cf3-9c94-02be34827d71.apk</string>
+
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ty_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:minHeight="48dip"
+        android:orientation="horizontal" >
+
+        <ProgressBar
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="3dp"
+            android:indeterminateDrawable="@anim/progressbar_loading_small" >
+        </ProgressBar>
+
+        <TextView
+            android:id="@+id/loading_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ff000000" >
+        </TextView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/footer_retry_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:minHeight="48dip"
+        android:text="@string/footer_msg_network_error"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+# view AndroidManifest.xml #generated:35
+-keep class com.kaixinbook.BookListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:52
+-keep class com.kaixinbook.InActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:47
+-keep class com.kaixinbook.Read { <init>(...); }
+

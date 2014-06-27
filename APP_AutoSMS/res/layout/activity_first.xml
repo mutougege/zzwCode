@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+    android:background="#f66e26"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/message_button"
+        style="@drawable/p1002"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="45dp"
+        android:background="#3d3c35"
+        android:text="编辑自动回复短信"
+        android:textSize="22sp" 
+        android:textColor="#fcfbf1"
+         />
+
+    <Button
+        android:id="@+id/preference_button"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="#dd261f"
+        android:text="设置自动回复参数"
+        android:textSize="22sp"
+        android:textColor="#fcfbf1"
+         android:layout_alignLeft="@id/message_button"
+        android:layout_below="@id/message_button"  />
+
+    <Button
+        android:id="@+id/history_button"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="#006b24"
+        android:text="查看自动回复历史"
+        android:textSize="22sp" 
+        android:textColor="#fcfbf1"
+         android:layout_alignLeft="@id/preference_button"
+        android:layout_below="@id/preference_button"/>
+
+</RelativeLayout>

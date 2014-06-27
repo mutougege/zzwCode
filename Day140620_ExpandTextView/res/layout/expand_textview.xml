@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/asset_info_gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#efefef"
+        android:fadingEdge="none"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="sssss\nddddd\nssss"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/permissions_lay"
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:layout_marginBottom="18dip"
+                android:background="#f6f6f6"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentTop="true"
+                    android:src="#d7d7d7" />
+                <!-- 该应用需要的权限 -->
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/security_settings_desc"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/expand_permissions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/navigation_expandable" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:src="#d7d7d7" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/desc_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+            	android:maxLines="4"
+            	android:textSize="14sp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:background="#f6f6f6"/>
+
+            <LinearLayout
+                android:id="@+id/permissions_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#f6f6f6"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

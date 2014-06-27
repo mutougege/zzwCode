@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="70dp"
+    android:background="#112288"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/asset_snippet_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/rankNumber"
+            android:layout_width="24dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="8dip"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#747373"
+            android:textSize="18dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            style="@style/asset_thumbnail_style"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dip"
+            android:src="@drawable/weibo_share"
+            android:layout_toRightOf="@id/rankNumber" />
+
+        <LinearLayout
+            android:id="@+id/layout_operation"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="18dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <com.zzw.day140530_downloadcase.widget.DownloadBtn
+                android:id="@+id/download_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:focusable="false"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/operation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:text="下载"
+                android:textColor="#747373"
+                android:textSize="12dp"
+                 />
+
+            <ProgressBar
+                android:id="@+id/pb_operation"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="30dp"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="1dp"
+                android:max="100"
+                android:progress="50"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/layout_operation"
+            android:layout_toRightOf="@id/thumbnail"
+            android:orientation="vertical" ><RelativeLayout
+                android:id="@+id/title_and_author"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="4dip"
+                android:paddingLeft="6dip"
+                android:paddingTop="2dp" >
+
+                <TextView
+                    android:id="@+id/title"
+                    style="@style/asset_main_style"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="微信客户端" />
+
+                <TextView
+                    android:id="@+id/app_descrip"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:singleLine="true"
+                    android:textColor="#747373"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/category"
+                    style="@style/asset_secondary_style"
+                    android:layout_alignBottom="@id/title"
+                    android:layout_toRightOf="@id/title"
+                    android:gravity="bottom"
+                    android:text="aaa"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/size"
+                    style="@style/asset_secondary_style"
+                    android:layout_alignParentBottom="true"
+                    android:paddingBottom="3dp"
+                    android:text="5.08M"
+                    android:textColor="#747373"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/version"
+                    style="@style/asset_secondary_style"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/size"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="5dp"
+                    android:text="版本"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/xpk_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/size"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/title"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="xpk_tag"
+                    android:paddingLeft="5dip"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/DownNumber"
+                    style="@style/asset_secondary_style"
+                    android:layout_below="@id/size"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--
+         <ImageView style="@style/asset_thumbnail_style" android:id="@+id/isFirst"
+	        android:layout_alignParentLeft="true" android:layout_centerVertical="true"
+			android:paddingLeft="8dip" android:paddingRight="4dip"
+	        android:src="@drawable/ic_firstpublich" android:visibility="gone"/>
+    -->
+
+</LinearLayout>
