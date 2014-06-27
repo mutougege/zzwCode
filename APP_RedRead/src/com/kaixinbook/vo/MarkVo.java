@@ -2,7 +2,7 @@ package com.kaixinbook.vo;
 
 /**
  * 记录书签的各种数据
- * 
+ *
  * @author
  * 
  */

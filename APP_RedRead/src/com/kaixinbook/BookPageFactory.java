@@ -66,6 +66,7 @@ public class BookPageFactory {
 		imageList = PictureUtil.GetImageFiles(path);
 		num = imageList.size();
 		
+		
 		mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);// 画笔
 		mPaint.setTextAlign(Align.LEFT);// 做对其
 		mPaint.setTextSize(m_fontSize);// 字体大小

@@ -10,7 +10,7 @@
     <!-- bookpop.xml -->
     <string name="bookpop_size">字体</string>
     <string name="bookpop_light">亮度</string>
-    <string name="bookpop_card">书签</string>
+    <string name="bookpop_card">字色</string>
     <string name="bookpop_send">跳转</string>
     <!-- in.xml -->
     <string name="in_refush">刷新</string>

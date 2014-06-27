@@ -39,6 +39,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.kaixinbook.R;
 import com.kaixinbook.helper.MarkHelper;
+import com.kaixinbook.mydialog.ColorPickerDialog;
 import com.kaixinbook.mydialog.MarkDialog;
 import com.kaixinbook.vo.MarkVo;
 
@@ -78,6 +79,10 @@ public class Read extends Activity implements OnClickListener, OnSeekBarChangeLi
 	private int size = 30; // 字体大小
 	private SharedPreferences sp;
 	int defaultSize = 0;
+	
+	private ColorPickerDialog dialog;
+    
+	
 	// 实例化Handler
 	public Handler mHandler = new Handler() {
 		// 接收子线程发来的消息，同时更新UI
@@ -275,6 +280,7 @@ public class Read extends Activity implements OnClickListener, OnSeekBarChangeLi
 							if (mPageWidget.DragToRight()) {// 左翻
 								try {
 									pagefactory.prePage();
+									
 									begin = pagefactory.getM_mbBufBegin();// 获取当前阅读位置
 									word = pagefactory.getFirstLineText();// 获取当前阅读位置的首行文字
 								} catch (IOException e1) {
@@ -477,9 +483,26 @@ public class Read extends Activity implements OnClickListener, OnSeekBarChangeLi
 		bookBtn4 = (TextView) popupwindwow.findViewById(R.id.bookBtn4);
 		bookBtn1.setOnClickListener(this);
 		bookBtn2.setOnClickListener(this);
-		bookBtn3.setOnClickListener(this);
+		bookBtn3.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				dialog = new ColorPickerDialog(Read.this, pagefactory.getM_textColor(), 
+                        "调色板", 
+                        new ColorPickerDialog.OnColorChangedListener() {
+	                    @Override
+	                    public void colorChanged(int color) {
+	                    	pagefactory.setM_textColor(color);
+                }});
+				dialog.show();
+			}
+		});
 		bookBtn4.setOnClickListener(this);
 	}
+	
+	
+	
+	
 
 	/**
 	 * 关闭55个弹出pop
@@ -488,7 +511,7 @@ public class Read extends Activity implements OnClickListener, OnSeekBarChangeLi
 		mToolpop.dismiss();
 		mToolpop1.dismiss();
 		mToolpop2.dismiss();
-		mToolpop3.dismiss();
+		//mToolpop3.dismiss();
 		mToolpop4.dismiss();
 	}
 
@@ -522,8 +545,12 @@ public class Read extends Activity implements OnClickListener, OnSeekBarChangeLi
 		mToolpop1 = new PopupWindow(toolpop1, LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
 		toolpop2 = this.getLayoutInflater().inflate(R.layout.tool22, null);
 		mToolpop2 = new PopupWindow(toolpop2, LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
-		toolpop3 = this.getLayoutInflater().inflate(R.layout.tool33, null);
-		mToolpop3 = new PopupWindow(toolpop3, LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
+		
+		
+		/*toolpop3 = this.getLayoutInflater().inflate(R.layout.tool33, null);
+		mToolpop3 = new PopupWindow(toolpop3, LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);*/
+		
+		
 		toolpop4 = this.getLayoutInflater().inflate(R.layout.tool44, null);
 		mToolpop4 = new PopupWindow(toolpop4, LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
 	}
@@ -576,13 +603,8 @@ public class Read extends Activity implements OnClickListener, OnSeekBarChangeLi
 					imageBtn2.setOnClickListener(this);
 					seekBar2.setOnSeekBarChangeListener(this);
 				}
-				// 当点击书签按钮
+				// 当点击调色按钮
 				if (a == 3) {
-					mToolpop3.showAtLocation(mPageWidget, Gravity.BOTTOM, 0, toolpop.getHeight());
-					imageBtn3_1 = (ImageButton) toolpop3.findViewById(R.id.imageBtn3_1);
-					imageBtn3_2 = (ImageButton) toolpop3.findViewById(R.id.imageBtn3_2);
-					imageBtn3_1.setOnClickListener(this);
-					imageBtn3_2.setOnClickListener(this);
 				}
 				// 当点击跳转按钮
 				if (a == 4) {
@@ -640,11 +662,8 @@ public class Read extends Activity implements OnClickListener, OnSeekBarChangeLi
 			}
 			// 点击书签按钮
 			if (a == 3) {
-				mToolpop3.showAtLocation(mPageWidget, Gravity.BOTTOM, 0, screenWidth * 45 / 320);
-				imageBtn3_1 = (ImageButton) toolpop3.findViewById(R.id.imageBtn3_1);
-				imageBtn3_2 = (ImageButton) toolpop3.findViewById(R.id.imageBtn3_2);
-				imageBtn3_1.setOnClickListener(this);
-				imageBtn3_2.setOnClickListener(this);
+				
+
 			}
 			// 点击跳转按钮
 			if (a == 4) {
